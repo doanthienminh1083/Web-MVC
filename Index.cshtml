@@ -1,0 +1,14 @@
+﻿@model WebHelloPerson.Models.CPerson
+
+<form asp-action="Index" method="post">
+    <div>
+        <label for="name">Moi nhap ten:</label>
+        <input type="text" id="name" name="Name" />
+    </div>
+    <button type="submit">Nhap!</button>
+</form>
+
+@if (!string.IsNullOrEmpty(ViewBag.Message))
+{
+    <h2>@ViewBag.Message</h2>
+}
